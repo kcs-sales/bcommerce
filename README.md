@@ -2,3 +2,5 @@
 **Under Developments**
 
 (Inspired by ERPNext, ERPNext-Shopify)
+
+## Korecent Solutions Pvt. Ltd.
