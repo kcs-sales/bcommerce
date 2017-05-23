@@ -9,4 +9,4 @@ import frappe
 
 
 def test():
-	print "Installed"
+	print "App Installed Successfully"
