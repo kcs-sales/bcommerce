@@ -3,4 +3,4 @@
 
 (Inspired by ERPNext, ERPNext-Shopify)
 
-## Korecent Solutions Pvt. Ltd.
+## Korecent Solutions Pvt Ltd
