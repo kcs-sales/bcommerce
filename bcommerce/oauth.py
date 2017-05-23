@@ -44,6 +44,7 @@ def validate_request(form_data):
 def redirect_request(res):
 	try:
 		from .bcommerce.doctype.big_commerce_service_request.big_commerce_service_request import save_info
+		from .utils.logger import make_logs
 		user_info = res.json()
 		info  = save_info(user_info)
 		template = frappe.get_template("templates/includes/form.html")
@@ -51,11 +52,13 @@ def redirect_request(res):
 						primary_action="", fullpage=True)
 
 	except Exception as e:
-		print frappe.get_traceback()
+		make_logs("Error", "OAuth", message=frappe.get_traceback())
 	
 	
 
 def bwrapper(f):
+
+	from .utils.logger import make_logs
 
 	def validate_payload(data, client_secret, hmac_signature):
 		client_secret = str(client_secret)
@@ -83,13 +86,16 @@ def bwrapper(f):
 			
 			return f(data=user_info)	
 		except Exception as e:
-			print frappe.get_traceback()
+			
+			make_logs("Error", "OAuth", message=frappe.get_traceback())
+
 	return wrapper
 
 @frappe.whitelist(allow_guest=True)
 @bwrapper
 def uninstall_app(*args, **kwargs):
 
+	from .utils.logger import make_logs
 	try:
 		data = kwargs.get("data")
 		if data:
@@ -101,7 +107,7 @@ def uninstall_app(*args, **kwargs):
 				frappe.db.commit()
 
 	except Exception as e:
-		print frappe.get_traceback()
+		make_logs("Error", "OAuth", message=frappe.get_traceback())
 
 
 
@@ -113,14 +119,14 @@ def uninstall_app(*args, **kwargs):
 @bwrapper
 def login(*args, **kwargs):
 
+	from .utils.logger import make_logs
 	try:
 		data = kwargs.get("data")
 		if data:
 			user = data.get("user")
-			print data
 		
 	except Exception as e:
-		print frappe.get_traceback()	
+		make_logs("Error", "OAuth", message=frappe.get_traceback())
 
 
 def notify(doc, method=None):
