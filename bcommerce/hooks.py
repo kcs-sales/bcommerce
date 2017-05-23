@@ -24,7 +24,7 @@ app_license = "MIT"
 
 # Home Pages
 # ----------
-fixtures = ["Custom Field", "Custom Script"]
+fixtures = ["Custom Field", "Custom Script", "Custom DocPerm"]
 # application home page (will override Website Settings)
 # home_page = "login"
 

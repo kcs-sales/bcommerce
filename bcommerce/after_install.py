@@ -10,3 +10,4 @@ import frappe
 
 def test():
 	print "App Installed Successfully"
+	print "Custom Permissions has been added for Item"
