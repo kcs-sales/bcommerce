@@ -1,0 +1,53 @@
+{% extends "templates/web.html" %}
+{% block style %}
+<style>
+	{% include "templates/includes/form.css" %}
+</style>
+{% endblock %}
+
+{% block page_content %}
+<section  class="form-update">
+	<div class="login-content page-card" style="margin-top: 20px;">
+                <form class="form-signin form-login" role="form">
+                        <div class="page-card-head">
+                                <span class="indicator blue" data-text="{{ _("Update Info") }}"></span>
+                        </div>
+
+                        <input type="text" id="store_url"
+                                class="form-control" placeholder="{{ _('Store URL') }}" required autofocus>
+
+                        <input type="text" id="phone_number"
+                                class="form-control" placeholder="{{ _('Phone Number') }}" required>
+
+                        <button class="btn btn-sm btn-primary btn-block btn-login" type="submit">
+                                {{ _("Update") }}</button>
+
+                </form>
+        </div>
+
+</section>
+{% endblock %}
+{% block sidebar %} {% endblock %}
+
+<!--
+<div>
+	<h2>Thanks for your interest in ERPNext</h1>
+	{% if already_register %}
+		
+		<h4>Your Email Info: {{doc.email_address}}</h4>
+		<h4>Username: {{doc.username}}</h4>
+		<h3> {{ _("We'll contact with you further steps for implementation") }}</h3>
+		<h4> <div class="btn btn-primary"> 
+				<a style="color:blue;" href="https://erpnextbigcomm.com/">Click here for other information</a>
+			</div>
+		</h4>
+	{% else %}
+		<h4> You'r already registered</h4>	
+		<h4> <div class="btn btn-primary"> 
+				<a style="color:blue;" href="https://erpnextbigcomm.com/erpnext-big-commerce">Click here for other information</a>
+			</div>
+		</h4>
+	{% endif %}
+
+</div>
+--!>

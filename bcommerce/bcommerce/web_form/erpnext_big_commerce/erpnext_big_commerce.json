@@ -1,0 +1,72 @@
+{
+ "accept_payment": 0, 
+ "allow_comments": 0, 
+ "allow_delete": 0, 
+ "allow_edit": 0, 
+ "allow_incomplete": 0, 
+ "allow_multiple": 0, 
+ "allow_print": 0, 
+ "amount": 0.0, 
+ "amount_based_on_field": 0, 
+ "creation": "2017-05-16 11:30:41.043901", 
+ "currency": "INR", 
+ "doc_type": "Big Commerce Service Request", 
+ "docstatus": 0, 
+ "doctype": "Web Form", 
+ "idx": 0, 
+ "is_standard": 1, 
+ "login_required": 0, 
+ "max_attachment_size": 0, 
+ "modified": "2017-05-16 14:45:44.532969", 
+ "modified_by": "Administrator", 
+ "module": "Bcommerce", 
+ "name": "erpnext-big-commerce", 
+ "owner": "Administrator", 
+ "payment_button_label": "Buy Now", 
+ "published": 1, 
+ "route": "erpnext-big-commerce", 
+ "show_sidebar": 0, 
+ "sidebar_items": [], 
+ "success_url": "/erpnext-big-commerce", 
+ "title": "ERPNext Big Commerce", 
+ "web_form_fields": [
+  {
+   "fieldname": "big_commerce_store_name", 
+   "fieldtype": "Data", 
+   "hidden": 0, 
+   "label": "Big Commerce Store Name", 
+   "max_length": 0, 
+   "max_value": 0, 
+   "read_only": 0, 
+   "reqd": 1
+  }, 
+  {
+   "fieldname": "big_commerce_store_url", 
+   "fieldtype": "Data", 
+   "hidden": 0, 
+   "label": "Big Commerce Store URL", 
+   "max_length": 0, 
+   "max_value": 0, 
+   "read_only": 0, 
+   "reqd": 1
+  }, 
+  {
+   "fieldname": "email_address", 
+   "fieldtype": "Data", 
+   "hidden": 0, 
+   "label": "Email Address", 
+   "max_length": 0, 
+   "max_value": 0, 
+   "read_only": 0, 
+   "reqd": 1
+  }, 
+  {
+   "fieldtype": "Column Break", 
+   "hidden": 0, 
+   "max_length": 0, 
+   "max_value": 0, 
+   "read_only": 0, 
+   "reqd": 0
+  }
+ ]
+}

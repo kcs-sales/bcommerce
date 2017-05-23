@@ -1,0 +1,8 @@
+{
+	"css/bcommerce.min.css":[
+		"public/css/bcommerce.css"		
+	],
+	"js/bcommerce.min.js":[
+		"public/js/bcommerce.js"
+	]
+}
